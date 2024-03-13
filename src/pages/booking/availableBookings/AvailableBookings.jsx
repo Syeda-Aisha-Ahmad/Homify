@@ -36,7 +36,7 @@ const AvailableBookings = ({ selected }) => {
 
             <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 mt-10'>
                 {
-                    bookingOptions.map((service) => {
+                    bookingOptions.map((service, i) => {
                         return (
                             <div key={service._id} className="box-style">
                                 <h3 className='text-2xl font-medium mb-2'>{service.name}</h3>
@@ -45,6 +45,7 @@ const AvailableBookings = ({ selected }) => {
                                 <div className=''>
                                     <button onClick={showModal} className='text-[#182b02] bg-[#f2fce6] hover:bg-[#e9fad4] transition-all px-7 py-2 font-semibold text-sm rounded-sm mt-5'>Book Service</button>
                                     <BookingModal
+                                        key={i}
                                         isModalOpen={isModalOpen}
                                         handleOk={handleOk}
                                         handleCancel={handleCancel}
