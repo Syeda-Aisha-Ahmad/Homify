@@ -1,0 +1,37 @@
+.box-style {
+    min-width: 155px;
+    /* height: 150px; */
+    color: #fff;
+    padding: 50px 10px;
+    text-align: center;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    position: relative;
+    display: inline-block;
+    outline: none;
+    border: 1px solid #182b02;
+    color: #182b02;
+    margin-top: 3px;
+    margin-bottom: 10px;
+    background: transparent;
+    z-index: 0;
+}
+
+.box-style:hover:after {
+    top: 0;
+    right: 0;
+}
+
+.box-style:after {
+    content: "";
+    width: 100%;
+    z-index: -1;
+    position: absolute;
+    height: 100%;
+    top: 5px;
+    right: 5px;
+    transition: 0.2s;
+    background-color: #b1c798;
+    border: 1px solid #182b02;
+}
